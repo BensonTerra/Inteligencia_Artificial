@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Iris</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+ <div class="hpPredict">
+	<h1>Iris Prediction</h1>
+
+
+     <!-- Main Input to our ML prediction-->
+    <form action="/predict" method="post">
+    	<input type="text" name="sepal length (cm)" placeholder="Avg sepal length" required="required" />
+      <input type="text" name="sepal width (cm)" placeholder="Avg sepal width" required="required" />
+      <input type="text" name="petal length (cm)" placeholder="Avg petal length" required="required" />
+      <input type="text" name="petal width (cm)" placeholder="Avg petal width" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Iris</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   
+ </div>
+
+
+</body>
+</html>

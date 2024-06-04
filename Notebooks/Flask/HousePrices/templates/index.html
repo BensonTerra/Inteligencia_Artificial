@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>House Price</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+ <div class="hpPredict">
+	<h1>House Price Prediction</h1>
+
+
+     <!-- Main Input to our ML prediction-->
+    <form action="/predict" method="post">
+    	<input type="text" name="Income" placeholder="Avg Area Income" required="required" />
+        <input type="text" name="Age" placeholder="House Age" required="required" />
+		<input type="text" name="Rooms" placeholder="Nr of Rooms" required="required" />
+		<input type="text" name="Bedrooms" placeholder="Nr of Bedrooms" required="required" />
+		<input type="text" name="Population" placeholder="Area Population" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict house price</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   
+ </div>
+
+
+</body>
+</html>
